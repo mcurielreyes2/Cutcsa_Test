@@ -1,0 +1,1095 @@
+
+--- Página 1 ---
+Sistema de energía de la batería
+K9W
+puro eléctrico
+--- Página 2 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Abreviatura Nombre completo
+HV Alto voltaje
+LV Baja tensión
+corriente continua Corriente continua
+C.A. Corriente alterna
+GND Suelo
+V2G Bidireccional controlador de motor invertido
+3 en 1 DC y controlador de motor auxiliar
+VCU Unidad de control de vehículos
+L / R Izquierda derecha
+BMS Sistema de Gestión de la batería
+BMC Controlador de Gestión de baterías
+BCC Batería Convertidor de Comunicaciones
+BIC Información de la batería del colector
+1
+--- Página 3 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+01
+Visión general
+02
+Principio de funcionamiento
+03
+Definición
+0044
+DDeessmmoonnttaajjee yy mmoonnttaajjee
+05
+Analisis fallido
+06
+Mantenimiento
+2
+ODINETNOC
+--- Página 4 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Localización de energía de la batería
+paquetes de baterías de potencia se encuentran en la parte superior y la parte trasera del autobús. Hay 2 paquetes y Pack 1 está a la derecha y Pack 2 está a la izquierda. Cada paquete tiene 8
+módulos. Los 8 módulos están conectados en serie y los 2 paquetes están conectados en paralelo.
+Pack 1
+Pack 2
+Frente
+3
+--- Página 5 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Paquetes de energía de la batería
+Los dos paquetes de baterías de potencia se conectan en paralelo.
+Pack 1
+La energía: 2 packs
+2 paquetes de conexión: Parallel
+Módulos total (cada paquete): 8 módulos
+Conexión módulo en paquete: Serie
+Pack 2
+Frente
+4
+--- Página 6 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Paquetes de energía de la batería
+Hay 16 módulos en el autobús, 6 módulos están en el compartimiento trasero, 6 módulos son en la parte trasera de la cubierta, y 4 módulos están en el frente de la cubierta.
+# 5 # 4
+# 8 7 # 6 #
+15 # 16 #
+13 # 14 # 12 #
+1 #
+9 # 2 #
+10 # 3 #
+Frente
+11 #
+5
+--- Página 7 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Estructura del módulo
+conector
+de señal Negativo
+Positivo
+impermeable y
+transpirable
+válvula
+Las células totales (cada módulo): 20 células
+Las células de conexión en el módulo: Series
+Módulo de tensión: 20 * 3.2V = 64 V
+20 puntos de voltaje de muestreo
+6 puntos de muestreo de temperatura
+entrada de
+salida de
+refrigerante
+refrigerante
+6
+--- Página 8 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Localización de BMC
+sistema de gestión de la batería incluye un controlador principal de gestión de la batería y dos controladores auxiliares de gestión de la batería, que se encuentran en la cabina del
+compartimiento trasero izquierdo.
+principal BMC
+Pack 2 BMC
+Pack 1 BMC
+7
+--- Página 9 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+Localización de BCC
+HHHaaayyy 666 BBBCCCCCC eeennn lllaaa PPPMMMBBB... LLLaaa lllooonnngggiiitttuuuddd dddeeelll aaarrrnnnééésss dddeee bbbaaajjjaaa ttteeennnsssiiióóónnn eeennntttrrreee eeelll mmmóóóddduuulllooo yyy eeelll mmmóóóddduuulllooo yyy eeennntttrrreee eeelll mmmóóóddduuulllooo yyy lllaaa BBBCCCCCC nnnooo dddeeebbbeee eeexxxccceeedddeeerrr 111...555mmm pppaaarrraaa aaassseeeggguuurrraaarrr qqquuueee lllaaa ssseeeñññaaalll
+es más fuerte y la información de la batería es más preciso.
+2 #
+3 #
+6 #
+5 # 1 #
+# 4
+BCC
+Frente
+8
+--- Página 10 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+La batería del sistema de refrigeración
+El sistema de refrigeración de la batería se utiliza para enfriar la batería para evitar un daño irreversible causado por la alta temperatura y se calienta la batería cuando está demasiado frío, y hacer que la
+energía de la batería siempre trabajo bajo temperatura adecuada, que extender el tiempo de vida útil de la batería de alimentación. Los principales componentes del sistema de refrigeración se enumeran a
+continuación.
+No Nombre
+1 Controlador de administración térmica * 1
+2 Bomba eléctrica de montaje * 4
+Refrigerante del tanque (Contener el nivel de refrigerante
+3
+detección del sensor)
+4 Sensor de temperatura * 2
+6 Tuberías y tubos flexibles
+Frente
+9
+--- Página 11 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+La batería del sistema de refrigeración
+Temperatura
+sensor
+depósito de
+refrigerante
+bomba eléctrica
+Temperatura
+sensor
+10
+--- Página 12 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+principal BMC
+eléctrico de fuga Detect
+Total de monitor de voltaje
+de Gestión de Procesos
+con autobús
+Proceso de descarga Comisión de Gestión
+servicio de la Detección del Enchufe puede red
+Comunicación Total actual monitor de
+CAN comunicación de red con el paquete BMC
+11
+--- Página 13 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+auxiliar BMC
+división de voltaje del contactor
+Función equilibrio
+Un solo componente actual de control del monitor de
+con el principal BMC
+Monitor de Temperatura celular
+Comunicación de red con BCC CAN Red de Comunicación
+Cell monitor de voltaje
+Un solo componente de tensión total monitor puede
+12
+--- Página 14 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Visión general
+enchufe de servicio
+enchufe de servicio es principalmente para garantizar que el alto voltaje se desconecta durante el mantenimiento. También integra dos contactores de división de voltaje y dos sensores de corriente
+de Espera.
+Conector
+2PIN
+chasis
+19PIN
+GND
+conector
+13
+--- Página 15 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Los cables de alta tensión
+Principio de funcionamiento
+LV arnés
+Principio eléctrica
+Los cables se
+HVDB
+enchufe de servicio
+# 1 # 2 # 3 # 6 # 7 # 8 # 4 # 5
+Módulo Módulo Módulo Módulo Módulo Módulo Módulo Módulo
+BIC BIC BIC BIC BIC BIC BIC BIC
+1 # BCC 3 # BCC 2 # BCC
+Pack 1 BMC
+principal BMC
+Pack 2 BMC
+4 # BCC 5 # BCC 6 # BCC
+BIC BIC BIC BIC BIC BIC BIC
+BIC
+Módulo
+# 9 # 10 # 11 # 12 # 13 # 14 # 15 # 16
+Módulo Módulo Módulo Módulo Módulo Módulo Módulo
+14
+--- Página 16 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Principio de funcionamiento
+Los cables se
+Principio de comunicación
+la red de la batería
+principal BMC
+Pack 1 BMC Pack 2 BMC
+1 # BCC 3 # BCC 2 # BCC 4 # BCC 5 # BCC 6 # BCC
+BIC BIC BIC BIC BIC BIC
+BIC BIC BIC BIC BIC BIC
+BIC BIC BIC BIC
+#red de información de la batería 1 red # 2 Información de la batería
+15
+--- Página 17 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Principio de funcionamiento
+principal BMC
+GND B-19
+enchufe de servicio Pack 1 BMC Pack 2 BMC
++24 A-34 +24 A-34
+señal
+GND Interlock
+Poder Controlar Poder Controlar
+# 1 de división de voltaje # 2 de división de voltaje
+contactor contactor
+enchufe de servicio
+# 1 sensor Hall actual 2 # sensor Hall actual
+protector de la señal protector de la señal
+Señal - 15V + 15V Señal - 15V + 15V
+GND GND
+A-19 A-26 A-18 A-27 A-19 A-26 A-18 A-27
+Pack 1 BMC Pack 2 BMC
+dieciséis
+--- Página 18 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Principio de funcionamiento
+Principio de carga
+voltios
+Cuando el bus se está cargando, el que sea celular alcanza
+celulares
+3.65V en primer lugar, la principal BMC enviará comando para
+3.65V
+interfaz de carga y V2G para detener la carga, considerar que el
+paquete que la célula encuentra en está completamente cargada.
+3.3V
+2.5V
+0 20% 80% 100% SOC
+Principio de descarga
+Cuando el autobús se está descargando, el que las células se reduce
+a 2,5 V en primer lugar, la principal BMC enviará comando para
+auxiliar BMC y V2G a la descarga de parada, consideran que toda la
+manada está vacía.
+Capacidad de agua
+tablero más corto (capacidad de la batería)
+(célula malo)
+17
+--- Página 19 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Principio de funcionamiento
+sistema de refrigeración de la batería
+sistema de refrigeración de la batería se usa para reducir el calor de la batería, para asegurar que las baterías son capaces de trabajar en la temperatura más adecuada.
+El refrigerante en el circuito de refrigeración fluye a través de los paquetes de baterías para llevar el calor bajo la fuerza de la bomba de agua eléctrica cuando sea necesario. Entonces fluye al
+intercambiador de calor de placas que intercambia el calor con el refrigerante rápidamente.
+Comfort neta
+potencia neta
+BMS Puerta
+Comfort neta
+Controlador de
+Tablero
+administración
+térmica
+Pump1 PUMP2 PUMP3 pump4
+agua agua agua agua
+18
+--- Página 20 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Principio de funcionamiento
+La lógica de control
+Cuando la temperatura de la batería de energía es más de 35 ° C durante la carga, BMC enviará la orden para iniciar el refrigerante bombas y A / C para enfriar la batería de la energía y se detendrá
+cuando la detección de la temperatura del refrigerante está por debajo de 33 ° C. Durante la descarga, el sistema comenzará a trabajar a 33 ° C y parada en 30 ° C.
+Controlador de Tablero
+administración
+térmica
+Paquete de baterías
++ - + -
+Descargue la carga de Señal de control Señal de control
+Pack 1 Pack 2
+iinniicciioo @@ 3333 3355 ℃℃
+red J1939
+DDeetteenneerr @@ 3300 3333 ℃℃
+Intercambiador
+J1939 puerta
+de calor
+de enlace
+señal de temp
+principal
+BMC
+señal CAN
+principal puerta de entrada sensores de temperatura Las bombas eléctricas
+Señal analoga 19
+--- Página 21 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Módulo (primera) LV Conector
+1 #, 7, # 4, # 9, 12 #, 15 # módulos
+7 4 1
+2
+3
+19 dieciséis
+Nº de pin Definición Observación
+4 IAO1_P Para BCC A-14
+5 Malla GND 1 A A-4 y A-6 escudo
+6 IAO1_N Para BCC A-15
+7 IAO2_N Para BCC A-2
+8 Malla GND 2 A A-7 y A-9 escudo
+9 IAO2_P Para BCC A-1
+10 IBO1_P Para siguiente módulo A-4
+11 IBO1_N Para siguiente módulo A-6
+12 IBO2_N Para el próximo módulo A-7
+13 IBO2_P Para el próximo módulo A-9
+Otros Reservado
+20
+--- Página 22 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Módulo (medio) LV Conector
+2 #, 10 #, 5 #, 13 # módulos
+7 4 1
+2
+3
+19 dieciséis
+Nº de pin Definición Observación
+4 IAO1_P Para el módulo anterior A-10
+5 Malla GND 1 A A-4 y A-6 escudo
+6 IAO1_N Para el módulo anterior A-11
+7 IAO2_N Para el módulo anterior A-12
+8 Malla GND 2 A A-7 y A-9 escudo
+9 IAO2_P Para el módulo anterior A-13
+10 IBO1_P Para siguiente módulo A-4
+11 IBO1_N Para siguiente módulo A-6
+12 IBO2_N Para el próximo módulo A-7
+13 IBO2_P Para el próximo módulo A-9
+Otros Reservado
+21
+--- Página 23 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Módulo (última) Conector LV
+3 #, 11 #, 6 #, 14 #, 8 #, 16 # módulos
+7 4 1
+2
+3
+19 dieciséis
+Nº de pin Definición Observación
+4 IAO1_P Para el módulo anterior A-10
+5 Malla GND 1 A A-4 y A-6 escudo
+6 IAO1_N Para el módulo anterior A-11
+7 IAO2_N Para el módulo anterior A-12
+8 Malla GND 2 A A-7 y A-9 escudo
+9 IAO2_P Para el módulo anterior A-13
+Otros Reservado
+22
+--- Página 24 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+1 # BCC
+Nº de pin Definición Observación
+1 IP2 Para el siguiente módulo A-9
+2 IM2 Al siguiente módulo A-7
+9 PUEDO Para la siguiente BCC A-26
+10 Puede proteger a GND Para la siguiente BCC A-25
+11 CAN_H Para la siguiente BCC A-24
+12 GND_IS01 Para PACK1 BMC A-11 / siguiente BCC A-12
+13 + 12V_IS01 Para PACK1 BMC A-3 / siguiente BCC A-13
+14 IP1 Para el siguiente módulo A-4
+15 IM1 Para el siguiente módulo A-6
+24 CAN_H Para PACK1 BMC A-1
+25 Puede proteger a GND Para PACK1 BMC A-2
+26 PUEDO Para PACK1 BMC A-10
+Otros Reservado
+23
+--- Página 25 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+3 # 5 # BCC
+Nº de pin Definición Observación
+1 IP2 Para el siguiente módulo A-9
+2 IM2 Al siguiente módulo A-7
+9 PUEDO Para la siguiente BCC A-26
+10 Puede proteger a GND Para la siguiente BCC A-25
+11 CAN_H Para la siguiente BCC A-24
+12 GND_IS01 Para PACK2 BMC A-11 / siguiente BCC A-12
+13 + 12V_IS01 Para PACK2 BMC A-3 / siguiente BCC A-13
+14 IP1 Para el siguiente módulo A-4
+15 IM1 Para el siguiente módulo A-6
+24 CAN_H Para PACK2 BMC A-1
+25 Puede proteger a GND Para PACK2 BMC A-2
+26 PUEDO Para PACK2 BMC A-10
+Otros Reservado
+24
+--- Página 26 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+4 # BCC
+Nº de pin Definición Observación
+1 IP2 Para el siguiente módulo A-9
+2 IM2 Al siguiente módulo A-7
+9 PUEDO Para la siguiente BCC A-26
+10 Puede proteger a GND Para la siguiente BCC A-25
+11 CAN_H Para la siguiente BCC A-24
+12 GND_IS01 Para PACK2 BMC A-11 / siguiente BCC A-12
+13 + 12V_IS01 Para PACK2 BMC A-3 / siguiente BCC A-13
+14 IP1 Para el siguiente módulo A-4
+15 IM1 Para el siguiente módulo A-6
+24 CAN_H Para PACK2 BMC A-1
+25 Puede proteger a GND Para PACK2 BMC A-2
+26 PUEDO Para PACK2 BMC A-10
+Otros Reservado
+25
+--- Página 27 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+2 y # 6 # BCC
+Nº de pin Definición Observación
+1 IP2 Al siguiente módulo 9 pines
+2 IM2 Para el siguiente pin módulo 7
+12 GND_IS01 Para anterior BCC A-12
+13 + 12V_IS01 Para anterior BCC A-13
+14 IP1 Al siguiente módulo 4 pines
+15 IM1 Al siguiente módulo 6 pines
+22 la resistencia terminal de Para A-26
+23 la resistencia terminal de Para A-24
+24 CAN_H Para previa BCC A-11
+25 Puede proteger a GND Para anterior BCC A-10
+26 PUEDO Para anterior BCC A-9
+Otros Reservado
+26
+--- Página 28 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+principal BMC
+34 PIN (A) 26 PIN (B) 26 PIN (C)
+34 26 26 20 8 1 13 7
+25 18 19 14 14 19
+9 17 1 10 7 13 1 8 20 26
+27
+--- Página 29 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+principal BMC
+34 PIN (A) 26 PIN (B)
+34 PIN (A) 26 PIN (B)
+34 2634 26 20 26 26 20
+25 182 5 19 14 18 19 14
+9 17 1 19 0 1 7 7 13 1 8 1 10 7 13 1 8
+Definición 34 Pin (A) del conector Definición 26 Pin (B) del conector
+Nº de pin Definición Observación Nº de pin Definición Observación
+9 contactor principal Al pin 2 del conector HVDB LV 1 Poder 24V
+14 Poder 24V 3 Poder 24V
+17 Principal Pre-carga del contactor Al pin 8 del conector HVDB LV 5 GND
+24 DC pre-carga del contactor Al pin 5 del conector HVDB LV 6 GND
+25 auxiliar del contactor Al pin 4 del conector HVDB LV 15 CAN_H red de energía
+31 Auxiliar de pre-carga del contactor Al pin 6 del conector HVDB LV 19 Servicio Plug Señal A Servicio de enchufe CT2-1
+33 CA de carga del contactor Al pin 9 del conector HVDB LV 22 PUEDO red de energía
+34 DC-DC de contactores Al pin 10 del conector HVDB LV Otros Reservado
+Otros Reservado
+28
+--- Página 30 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+principal BMC
+26 PIN (C)
+13 7
+8 1
+19
+14
+26
+20
+Definición 26 Pin (C) conector
+Nº de pin Definición Observación
+1 PUEDO Para la red de la batería y el puerto de diagnóstico
+7 alimentación de 12V Para PACK1 BMC B-1
+8 CANH Para la red de la batería y el puerto de diagnóstico
+13 GND Para PACK2 BMC B-2
+19 alimentación de 12V Para PACK2 BMC B-1
+26 GND Para PACK1 BMC B-2
+Otros Reservado
+29
+--- Página 31 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Pack 1 BMC
+34 PIN (A) 26 PIN (B)
+34 26 26 20
+25 18 19 14
+9 17 1 10 7 13 1 8
+Definición 34 Pin (A) del conector
+Nº de pin Definición Observación
+1 BCC CAN_H 1 # BCC A-24 y 2 pin 1 # puerto de adquisición de datos
+2 Puede proteger a GND 1 # BCC A-25 y 2 GND # puerto de adquisición de datos
+3 BCC + 12V_IS01 1 # BCC A-13
+10 BCC CAN_L 1 # BCC A-26 y 2 pin9 # puerto de adquisición de datos
+11 GND_IS01 1 # BCC A-12
+18 # 1 Salón -15V sensor de corriente Servicio de enchufe CT1-9
+19 # 1 Salón escudo sensor de corriente Servicio de enchufe CT1-7
+26 1 # señal de sensor de corriente Salón Servicio de enchufe CT1-8
+27 # 1 sensor de corriente de 15 V Salón + Servicio de enchufe CT1-10
+34 1 # de división de voltaje de control del contactor Servicio de enchufe CT1-1
+Otros Reservado
+30
+--- Página 32 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Pack 1 BMC
+34 PIN (A) 26 PIN (B)
+34 26 26 20
+25 18 19 14
+9 17 1 10 7 13 1 8
+Definición 26 Pin (B) del conector
+Nº de pin Definición Observación
+1 12V BMC principal perno C-7
+2 GND Principal BMC pin C-26
+8 24V alimentación del circuito dual
+dieciséis CAN_H la red de la batería
+17 PUEDO la red de la batería
+21 GND chasis GND
+Otros Reservado
+31
+--- Página 33 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Pack 2 BMC
+34 PIN (A) 26 PIN (B)
+34 26 26 20
+25 18 19 14
+9 17 1 10 7 13 1 8
+Definición 34 Pin (A) del conector
+Nº de pin Definición Observación
+1 BCC CAN_H 3 # BCC A-24 y 2 pin 2 # puerto de adquisición de datos
+2 Puede proteger a GND 3 # BCC A-25 y 2 GND # puerto de adquisición de datos
+3 BCC + 12V_IS01 3 # BCC A-13
+10 BCC CAN_L 3 # BCC A-26 y 2 PIN10 # puerto de adquisición de datos
+11 GND_IS01 3 # BCC A-12
+18 # 2 Salón -15V sensor de corriente Servicio de enchufe CT1-13
+19 2 # sensor Hall actual escudo GND Servicio de enchufe CT1-11
+26 2 # señal de sensor de corriente Salón Servicio de enchufe CT1-12
+27 # 2 Salón sensor de corriente + 15V Servicio de enchufe CT1-14
+34 2 # de división de voltaje de control del contactor Servicio de enchufe CT1-3
+Otros Reservado
+32
+--- Página 34 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Pack 2 BMC
+34 PIN (A) 26 PIN (B)
+34 26 26 20
+25 18 19 14
+9 17 1 10 7 13 1 8
+Definición 26 Pin (B) del conector
+Nº de pin Definición Observación
+1 12V Principal BMC pin C-19
+2 GND Principal BMC pin C-13
+8 24V alimentación del circuito dual
+dieciséis CAN_H la red de la batería
+17 PUEDO la red de la batería
+21 GND chasis GND
+Otros Reservado
+33
+--- Página 35 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Conector enchufe de servicio LV
+7 4 1
+2
+19 dieciséi3 s
+CT1
+Nº de pin Definición Observación
+1 1 # de división de voltaje de control del contactor Pack1 BMC pin A-34
+2 1 # de división de voltaje 24V contactor alimentación del circuito dual
+3 2 # de división de voltaje de control del contactor Pack2 BMC pin A-34
+4 2 # de división de voltaje 24V contactor alimentación del circuito dual
+7 # 1 sensor Hall actual escudo GND Pack1 BMC pin A-19
+8 1 # señal de sensor de corriente Salón Pack1 BMC pin A-26
+9 # 1 Salón -15V sensor de corriente Pack1 BMC pin A-18
+10 # 1 sensor de corriente de 15 V Salón + Pack1 BMC pin A-27
+11 2 # sensor Hall actual escudo GND Pack2 BMC pin A-19
+12 2 # señal de sensor de corriente Salón Pack2 BMC pin A-26
+13 # 2 Salón -15V sensor de corriente Pack2 BMC pin A-18
+14 # 2 Salón sensor de corriente + 15V Pack2 BMC pin A-27
+Otros Reservado
+34
+--- Página 36 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Conector enchufe de servicio LV
+1 2
+CT2
+Nº de pin Definición Observación
+1 señal de enclavamiento de clavija Servicio BMC principal pin B-19
+2 GND chasis GND
+35
+--- Página 37 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Controlador de administración térmica
+1 6 1 6 1 10
+UN
+17 24
+23 30
+18 26
+UN si C
+Controlador Térmico A & B Conector Pin Definición
+Nº de pin Definición Observación Nº de pin Definición Observación
+# 3 Control de la bomba de refrigerante
+A-1 Poder 24V + (de IG relé) B-18 Conexión a retransmitir K6-6
+Terminal
+# 4 Control de la bomba de refrigerante
+A-2 GND Suelo B-20 Conexión a retransmitir K6-6
+Terminal
+A-24 GND Suelo B-21 CAN_H neta cuerpo
+# 1 Refrigerante Terminal de
+B-1 Conexión a retransmitir K6-9 B-22 PUEDO neta cuerpo
+Control de Bomba
+# 2 Refrigerante Terminal de
+B-9 CCoonneexxiióónn aa rreettrraannssmmiittiirr KK66--99 OOttrrooss Reservado /
+Control de Bomba
+36
+--- Página 38 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Controlador de administración térmica
+1 6 1 6 1 10
+UN
+17 24
+30
+18 26 23
+UN si C
+Controlador de administración térmica C Conector Pin Definición
+Nº de pin Definición Observación Nº de pin Definición Observación
+Refrigerante Nivel de señal
+C-10 GND C-19 # 1 de refrigerante Detección de Nivel señal de nivel de líquido refrigerante
+Detección GND
+2 # temperatura de Conexión a 2 # refrigerante 1 # temperatura de refrigerante del señor
+C-13 C-23 Conexión a 1 # sensor de temperatura de refrigerante
+refrigerante detección del sensor sensor de temperatura Detección
+C-15 GND del sensor GND C-29 Poder para el llenado de líquido refrigerante 24V + para iniciar la bomba (fusible F2 / 27)
+Otros Reservado /
+37
+--- Página 39 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Definición
+Bomba de refrigerante, Sensor de temperatura y conector de detección del nivel de refrigerante
+3 4
+1 2 1 2
+UN
+1 2
+re mi F
+Bomba de refrigerante (D), Sensor de temperatura (E) y conector de detección del nivel de refrigerante Definición (F) Pin
+Nº de pin Definición Observación
+D-1 Poder 24V
+D-3 GND Suelo
+E-1 temp señal La resistencia entre estos dos pasadores será 3.6kΩ a 1.1kΩ cuando la
+E-2 GND tttteeeemmmmppppeeeerrrraaaattttuuuurrrraaaa eeeessss 11110000 ℃℃℃℃ aaaa 44440000 ℃℃℃℃....
+Cuando no hay refrigerante, la resistencia entre estos dos pines es inferior a 50Ω,
+F-1 señal de detección de nivel de líquido refrigerante
+cuando el refrigerante está lleno, la resistencia es más de 10k.
+F-2 GND
+Otros Reservado /
+38
+--- Página 40 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la batería de energía
+Lista de Herramientas
+Nombre Cant. Observación
+llave dinamométrica 1 Set
+Destornillador 1 Set
+Llave y zócalo 1 Set
+Máquina elevadora 1 unidad Capacidad de elevación> 800 kg
+grifo aire a alta presión 1 Set La presión del aire> 400 kPa
+Guantes aislantes y calzado 1 Set
+multímetro 1 Set
+Pipeline clamp_13in sello 2 Conjunto
+fin cap_Ф18_plastic 2 piezas cada paquete
+Caucho vaina Φ27 * 22.8mm 2 piezas cada paquete
+herramientas especiales para el desmontaje de la batería 1 Set
+39
+--- Página 41 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la batería de energía
+abrazadera de sello Pipeline Block_Ф18 Caucho vaina Reprimición
+40
+--- Página 42 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+BMC Desmontaje
+Siga el procedimiento siguiente para desmontar el BMC:
+1. Apague el autobús y apague 2. Use aislante zapatos, guantes 3. Desconectar el conector de servicio, que sea 4. Retire los pernos y LV
+el interruptor de LV y cinturón de seguridad, prepararse para con seguridad, y esperar 10 minutos conectores entonces pueden despegar la
+trabajo en el techo del autobús. antes de operar en alta tensión BMC (10N M6 · M).
+sistema.
+Asamblea BMC
+Procedimiento de montaje está enfrente de desmontaje.
+41
+--- Página 43 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la batería de energía
+Siga el procedimiento siguiente para desmontar el paquete de energía de la batería y los accesorios internos:
+1. Apague el autobús y apague 2. Use aislante zapatos, guantes 3. Desconectar el conector de servicio, que sea 4. Retirar los 6 tornillos.
+el interruptor de LV y cinturón de seguridad, prepararse para con seguridad, y esperar 10 minutos
+trabajo en el techo del autobús. antes de operar en alta tensión
+sistema.
+42
+--- Página 44 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la batería de energía
+5. Fijar la manguera de refrigerante con el gasoducto 6. Bloquear el puerto de refrigerante en la batería 7. Abra la cubierta de la
+abrazadera del sello. Quitar el tubo de enfriamiento y con funda de goma para detener el refrigerante positivo negativo.
+utilizar recipiente para recoger el refrigerante. desde fuera de fluir.
+9. Retire el positivo y negativo 10. Tire de la hebilla y ligeramente
+tornillos y sacar el cable
+a continuación, quitar el conector del VI.
+43
+--- Página 45 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+Asamblea energía de la batería
+44
+--- Página 46 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+Asamblea energía de la batería
+45
+--- Página 47 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+el rellenado de líquido refrigerante
+Rellenarlo con el nivel normal, a continuación, encienda el interruptor de la bomba, y dejar que el trabajo de la bomba
+durante 5 min, repetir esta operación hasta que las estancias de nivel de líquido refrigerante entre la marca “H”
+H
+y “L” y no cambiará. Cada sistema de batería de enfriamiento tiene un todo
+capacidad de refrigerante de 30 litros en total.
+L
+Advertencia
+• No abra la tapa del depósito de refrigerante cuando todavía está caliente.
+• No mezclar con diferentes modelos de refrigerante.
+• mmooddeelloo rreeccoommeennddaaddaa:: ppuunnttoo ddee ccoonnggeellaacciióónn --4400 ℃℃..
+interruptor de la bomba
+46
+--- Página 48 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la bomba de refrigerante
+Siga el procedimiento siguiente para desmontar la bomba eléctrica.
+Lista de Herramientas
+Nombre Cant. Nombre Cant.
+alicates de prensión 2 Conjunto Abrazadera de un tubo 1 Set
+manga M6 1 Set clave del servicio 1 Set
+1. Apague el autobús y 2. Abra la cubierta de la batería techo de la cabina con la cabeza cuadrada 3. Retire los dos tornillos de
+apague el interruptor de la batería LV clave y encontrar la bomba eléctrica. el soporte.
+y esperar 10 minutos.
+47
+--- Página 49 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+El desmontaje de la bomba de refrigerante
+4. Desconectar el bajo voltaje 5. Use dos pinzas de agarre para poner freno dos 6. Uso abrazadera de tubo para eliminar la abrazadera
+conector con cinta adhesiva. tuberías para bloquear el refrigerante que viene y desconecte dos mangueras luego tomar la
+fuera. Utilizar el contenedor para recoger el Bombear el refrigerante.
+refrigerante procedente de la bomba de refrigerante.
+Conjunto de la bomba de refrigerante
+Procedimiento de montaje está enfrente de desmontaje. Después de recuperar todo lo dicho, refrigerante de relleno en el sistema de refrigeración de la batería de alimentación.
+48
+--- Página 50 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+Sensor de temperatura El desmontaje
+Siga el procedimiento siguiente para desmontar el sensor de temperatura.
+Lista de Herramientas
+Nombre Cant. Nombre Cant.
+alicates de prensión 2 Conjunto Abrazadera de un tubo 1 Set
+1. Apague el autobús y 2. Abrir la cubierta del techo y encontrar el sensor de temperatura. 3. Desconectar el conector con cinta adhesiva.
+apague el interruptor de la batería LV
+y esperar 10 minutos.
+49
+--- Página 51 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+Sensor de temperatura El desmontaje
+4. Uso dos pinzas de agarre sujetan dos 5. Uso de los alicates tubo para eliminar la abrazadera 6. Sacar el sensor de temperatura.
+mangueras que conectan al sensor. y desconecte dos mangueras.
+Conjunto sensor de temperatura
+Procedimiento de montaje está enfrente de desmontaje. Después de recuperar todo lo dicho, refrigerante de relleno en el sistema de refrigeración de la batería de alimentación.
+50
+--- Página 52 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Desmontaje y montaje
+Desmontaje del controlador de administración térmica
+SSiiggaa eell pprroocceeddiimmiieennttoo ssiigguuiieennttee ppaarraa eell ddeessmmoonnttee ccoonnttrroollaaddoorr ddee ggeessttiióónn ttéérrmmiiccaa..
+1. Apague el autobús y 2. conectores Desenchufe 3 LV para 3. Retire los dos tornillos de
+apague el interruptor de la batería BT. el controlador el soporte a continuación, despegar la
+controlador.
+Asamblea del controlador de administración térmica
+Procedimiento de montaje está enfrente de desmontaje.
+51
+--- Página 53 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+El uso de software auxiliar BMS para monitorear el voltaje de la célula y la información de la temperatura
+Lea la información de autobús desde la red de alimentación DLC pin 6 (CAN_H) y el pin 14 (CAN_L), a continuación, conectar con la caja de CAN, haga clic en el
+''''' CCCCCooooonnnnneeeeeccccctttttaaaaarrrrr '''''YYYYY,,,,, aaaaa cccccooooonnnnntttttiiiiinnnnnuuuuuaaaaaccccciiiiióóóóónnnnn,,,,, hhhhhaaaaagggggaaaaa cccccllllliiiiiccccc eeeeennnnn eeeeelllll''''' IIIIInnnnniiiiiccccciiiiiooooo CCCCCAAAAANNNNN '''''PPPPPaaaaarrrrraaaaa llllleeeeeeeeeerrrrr lllllaaaaa iiiiinnnnnfffffooooorrrrrmmmmmaaaaaccccciiiiióóóóónnnnn dddddeeeeelllll aaaaauuuuutttttooooobbbbbúúúúússsss
+1
+2
+3 4
+Cell área de voltaje
+Cell Area Temperatura
+52
+--- Página 54 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Mal funcionamiento Porque Juicio Solución
+1.Verificar de software auxiliar de BMS para averiguar qué celda tiene problema anormal de muestreo de tensión /
+Reemplazar si mal funcionamiento
+temperatura. 2.Replace o intercambiar el BIC con uno de módulo normal, que tiene la misma cantidad de células,
+BIC desaparecer o cambiar la ubicación
+comprobación de si el mal funcionamiento desaparecer o localización cambio.
+1. Si todos son buenos, cheque y medir el voltaje de la célula y la temperatura del conector BIC. 2.Mida la tensión de
+Equilibrio o reemplazado la célula
+Célula celda, si es demasiado alta o demasiado baja, la necesidad de células que se fije.
+1. Si la célula tiene ningún problema, compruebe si hay bombilla en el FPC. 2.Mida el voltaje de la celda y de la temperatura
+Mal funcionamiento de potencia de la batería
+del conector BIC. Si la tensión de muestreo es demasiado alta (> 4.15V) o demasiado baja (<1,0 V), o el muestreo de la Reemplazar el CPF o vuelva a
+FPC
+tteemmppeerraattuurraa eess ddeemmaassiiaaddoo bbaajjaa ((<<--3300 ℃℃)).. soldar la FPC
+3.Compruebe si el punto de soldadura está suelto.
+Reemplazar el conector BIC / alambre
+conector BIC alambre / Muestreo 1. Verificar si el conector BIC obviamente corrosivo. 2. Si todo lo anterior son buenas.
+de muestreo
+1.Replace el fusible (F1 / 21) o relé si
+1. Verificar si el 24V fuente de alimentación del lado del bus es correcto, compruebe el fusible y relé.
+BMC cualquier problema
+2.Replace el BMC y ver si el problema desaparece al.
+2.Replace el BMC
+1.Verificar de software auxiliar de BMS para averiguar qué celda tendrá un problema de toma de muestras anormales de Reemplazar el BIC si mal
+BIC (sin agua sumergido)
+Potencia del sobrecalentamiento de la batería temperatura. 2.Replace el BIC y comprobar si el mal funcionamiento desaparece. funcionamiento desaparece
+Secar el paquete y reemplazar
+Compruebe si hay agua o vapor de agua en el / conector BIC / alambre de muestreo BIC / FPC si es necesario
+inmerso agua la parte rota si hay
+Mal funcionamiento del sistema de alimentación
+Consulte con el software principal de BMS, si la fuga grave, compruebe el voltaje entre positivo de la batería de alimentación y Compruebe el punto de fuga con el
+fugas eléctricas
+el polo negativo a GND multímetro.
+53
+--- Página 55 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Mal funcionamiento Porque Juicio Solución
+Compruebe la red CAN alimentación y la batería, comprobar si la resistencia del cable CAN o tensión es normal
+líneas del CAN (resistencia deberá ser de 60 o 120 ohmios, el voltaje de CANH es 2.5V-3.5V, voltaje de CANL es 1.5-2.5V. Reparar la línea CAN
+1. Si las líneas del CAN son buenas, cheque si la fuente de alimentación de 24V del lado del bus es correcto, compruebe el fusible y 1.check el módulo de
+BMC el relé de BMC. control
+2.Replace el BMC y ver si el mal funcionamiento desaparece. 2.Replace el BMC
+Luces de advertencia sobre múltiples Si el BMC es bueno, comprobar si se puede obtener información de la célula en el software auxiliar de BMS, si no puede,
+Vuelva a colocar la BCC si mal
+Guión BCC abra el paquete para comprobar el módulo de BCC, reemplazarlo y ver si desaparece el mal funcionamiento.
+funcionamiento desaparece
+Vuelva a colocar la BCC si mal
+BIC Si el BCC es correcto, cambie el BIC para verificar.
+funcionamiento desaparece
+Secar el paquete y reemplazar
+Compruebe si hay agua o vapor de agua en el BIC / conector BIC / alambre de muestreo si es necesario
+inmerso agua la parte rota si hay
+método de diagnóstico misma con “mal
+BIC / Cell / FPC / conector BIC
+método de diagnóstico mismo con “mal funcionamiento de la batería de energía” (comprobar el muestreo de voltaje) funcionamiento de la batería de energía”
+alambre / Muestreo
+SOC Jump repente
+1. Compruebe el módulo de
+1. Verificar si el 24V fuente de alimentación del lado del bus es correcto, compruebe el fusible y relé.
+BMC control
+2.Replace el BMC y ver si el mal funcionamiento desaparece.
+2.Replace el BMC
+54
+--- Página 56 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Cell relación de tensión-SOC Después de 1 hora de estacionamiento' s
+0% 2% 4% 6% 8% 10% 12% 14% dieciséis% 18% 20% 22% 24% 26% 28% 30% 32%
+2,284 2,709 2,896 3.012 3,095 3.156 3.202 3.219 3.221 3,222 3,225 3.23 3.238 3,248 3.259 3,269 3,279
+34% 36% 38% 40% 42% 44% 46% 48% 50% 52% 54% 56% 58% 60% 62% 64% 66%
+3,286 3.297 3,301 3,302 3.304 3,305 3,305 3,306 3,306 3,306 3,306 3,307 3,307 3,307 3,308 3,308 3,308
+68% 70 y 72% 74% 76% 78% 80% 82% 84% 86% 88% 90% 92% 94% 96% 98% 100%
+3.309 3.31 3.311 3,312 3,314 3.317 3,323 3,334 3,342 3,344 3,344 3,344 3,344 3,344 3.43 3,344 3.45
+55
+--- Página 57 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Mal funcionamiento de la batería
+Consulte con
+monitor de BMS
+1 3
+software
+voltaje o temperatura anormal
+No hay alarma en el software
+muestreo
+2
+Localizar qué paquete tiene
+Localiza Bad módulo de muestreo de tensión / neta de energía a cobro revertido y la
+fugas eléctricas
+temperatura con BMS auxiliares batería mensaje de red CAN cuando la
+software y abierto que el paquete energía en el autobús
+Abrir el paquete que hacer
+comprobación adicional Enviar a centro de I + D de
+Abrir paquete de baterías correspondientes
+análisis mas extenso
+Mida el voltaje y la resistencia Solucionar el problema Obtener solución y fijar el
+desde el conector BIC
+problema
+Comprobar si BIC Reemplace la
+si
+los valores son mal BIC Sustituir
+Solucionar
+normales No el FPC / célula / alambre de
+el problema
+muestreo o
+equilibrar las células
+56
+--- Página 58 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Diagnóstico de la batería de sobrecalentamiento
+El uso del ordenador portátil / VDS2000 para leer datos BMS
+norte
+Sobrecalentar Normal
+Y
+Medir la resistencia de la temperatura
+el muestreo de los terminales de las células
+Según RT hoja juzgar
+temperatura
+Y norte
+FPC / muestreo / fallo de cableado de la célula Sobrecalentar BIC o BMC culpa
+57
+--- Página 59 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+La fuga eléctrica
+hhheeerrrrrraaammmiiieeennntttaaa dddeee iiinnnssspppeeecccccciiióóónnn ::: mmmuuullltttííímmmeeetttrrrooo
+Fugas!
+método de inspección es sencilla:
+Conectar el polo positivo del multímetro con el polo positivo
+polo de la batería, y conectar el polo negativo de
+Multímetro con la masa de la carrocería del autobús. El valor normal
+debe ser inferior 10V. Y será el mismo cuando
+la medición de la tensión entre el poder negativo de la batería
+polo a GND.
+Si el voltaje es demasiado alto, por favor no retire la batería
+fuga eléctrica entre el / negativo positivo y tierra del chasis
+y pedir ingeniero de BYD en busca de ayuda para averiguar la causa y
+(bandeja de las baterías de potencia).
+localizar la fuga eléctrica.
+58
+--- Página 60 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+SOC Jump repente
+RRaazzóónn ::
+Pack 1 SOC: 70% Pack 2 SOC: 70%
+Las celdas de la batería es severo desequilibrio. El SOC tendrá un cambio rápido debido
+a esto.
+BBBBBuuuuusssss SSSSSOOOOOCCCCC::::: ((((( 7777700000%%%%% +++++ 7777700000%%%%% ))))) ///// 22222 ===== 7777700000%%%%%
+Dos ejemplos:
+• Durante la carga, si ambos paquete 1 y el paquete 2 tiene un SOC del 70%, también la
+SOC del bus será 70%. A continuación, las células una batería de paquete 1 se apresura a 3.8V,
+a continuación, el SOC de la manada 1 se precipitará a 100%, entonces el SOC de la autobús
+saltar a 85%.
+PPaacckk 11 SSOOCC:: 110000%% Pack 2 SOC: 70%
+• Durante la descarga, si ambos paquete 1 y el paquete 2 tiene un SOC del 40%, también la
+SOC del bus será 40%. A continuación, las células una batería de paquete 1 cae por debajo
+BBBBBBuuuuuussssss SSSSSSOOOOOOCCCCCC:::::: (((((( 111111000000000000%%%%%% ++++++ 777777000000%%%%%% )))))) ////// 222222 ====== 888888555555%%%%%%
+2.2V, entonces el SOC de la manada 1 se precipitará a 0%, entonces el SOC del autobús
+saltará al 20%.
+59
+--- Página 61 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Mal balance de la batería de la célula Definición
+Si la tensión de algunas células son siempre inferiores a nivel medio mientras se carga a plena, y / o
+superior, mientras que la descarga de vaciar, podemos ver esta celda no está equilibrado, que reequilibrar la misma.
+≈100%
+voltios celulares
+Curva <10%
+≈100%
+voltios celulares
+Curva
+<10%
+Cómo balancear las células Dispositivo balance de la batería
+①① EEnnccuueennttrraa llaa mmaallaa ccéélluullaa ssoossppeecchhoossaa yy uunnaa bbuueennaa cceellddaa;;
+②② CCaarrggaarr eell cceelluullaarr bbuueennoo yy ccoommpplleettoo ddee ddeessccaarrggaa ppaarraa vvaacciiaarr,, yy rreeggiissttrraarr llaa ccaappaacciiddaadd ddee uunnaa bbuueennaa cceellddaa;;
+③③ DDee ddeessccaarrggaa ddee llaa ccéélluullaa ssoossppeecchhoossaa ddee vvaacciiaarr yy rreeccaarrggaarr ccoonn llaa ccaappaacciiddaadd ddee AA eenn eell ppaassoo 22;;
+④④ eeqquuiilliibbrraarr eell ttrraabbaajjoo tteerrmmiinnaaddoo.. ccéélluullaass rreettrraassaarrssee hhaassttaa eell ppaaqquueettee ddee bbaatteerrííaass..
+60
+--- Página 62 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+La atenuación de las celdas
+Si la tensión de alguna célula siempre superior a nivel medio mientras se carga a plena, y / o bajar mientras se descarga
+aaalll vvvaaacccíííooo,,, eeessstttaaa cccéééllluuulllaaa eeesss eeennn vvviiirrrtttuuuddd dddeee lllaaa aaattteeennnuuuaaaccciiióóónnn ,,, CCCuuuyyyaaa cccaaapppaaaccciiidddaaaddd nnnooo eeesss sssuuufffiiiccciiieeennnttteee... QQQuuueee ttteeennngggaaa qqquuueee rrreeeeeemmmppplllaaazzzaaarrrlllooo... AAAlll mmmiiisssmmmooo tttiiieeemmmpppooo,,,
+vvvvveeeeehhhhhííííícccccuuuuulllllooooo tttttiiiiieeeeennnnneeeee aaaaa mmmmmeeeeennnnnuuuuudddddooooo SSSSSOOOOOCCCCC sssssaaaaallllltttttooooo ooooo rrrrraaaaannnnngggggooooo mmmmmááááásssss cccccooooorrrrrtttttooooo ooooobbbbbvvvvviiiiiooooo ppppprrrrrooooobbbbbllllleeeeemmmmmaaaaa.....
+≈100%
+voltios celulares
+Curva
+<10%
+Ejemplo
+61
+--- Página 63 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Analisis fallido
+Mal funcionamiento Porque Juicio Solución
+pérdida de comunicación con el controlador. Compruebe si hay fuente de alimentación (F1 / 19) y los conectores se suelta. Arreglalo.
+1.Compruebe si hay 24V fuente de alimentación al controlador, cheque fusible F1 / 19 y el
+Térmica Alarma por avería en
+el sistema de gestión en el alambre. 1.Replace el alambre de fusible / LV.
+controlador de gestión térmica no está funcionando 2.Compruebe si hay una buena conexión de cables CAN y medir la resistencia CAN (60 2.Fix el problema CAN.
+salpicadero
+ohm es normal) y el voltaje (2,5 V a 3,5 V entre CANH a GND, de 1,5 V a 2,5 V entre 3..Replace si mal funcionamiento
+CANH a GND) desaparece.
+3. Coloque un nuevo controlador para ver si el mal funcionamiento desaparecerá.
+sistema de gestión térmica no TTeemmppeerraattuurraa mmááxxiimmaa ddee ppiillaass eess <<== 3333 ℃℃.. Es normal. No se necesita ninguna operación.
+puede comenzar mientras
+carga
+Permitido potencia de carga es 0KW. Compruebe el sistema de la batería. Consulte la parte de la batería de alimentación.
+No se necesita ninguna operación.
+TTeemmppeerraattuurraa mmááxxiimmaa ddee ppiillaass eess <<== 3300 ℃℃.. Es normal.
+sistema de gestión térmica no
+puede comenzar mientras SOC <5% El SOC es demasiado bajo. Cargar el autobús.
+descarga
+Permitido potencia de descarga es 0KW. Compruebe el sistema de la batería. Consulte la parte de la batería de alimentación.
+Fijar el punto de fuga de refrigerante y volver a llenar.
+Refrigerante no es suficiente Punto de control de fugas en todo el sistema.
+Refrigerante sensor de detección de nivel tiene problema Medir la resistencia entre los dos pasadores, ver si el valor es menor que 50Ω
+Refrigerante de bajo nivel de alarma Si es así, sustituirlo.
+Medir la continuidad entre el sensor y el controlador de gestión térmica.
+El cable de señal tiene problema Encontrar el punto abierto y solucionarlo.
+62
+--- Página 64 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Mantenimiento
+Si la batería de energía se almacenará durante más de 6 meses, la batería de la necesidad de recarga a pleno y descarga al 40% ~ 60% del SOC, a continuación, relatan el círculo de almacenamiento.
+Temperatura Humedad relativa Hora SOC
+ppoorr ddeebbaajjoo ddee --4400 ℃℃ / Prohibir /
+-- 4400 ~~ 55 ℃℃ 5% ~ 95% Dentro de 6 meses 40% ≤SOC≤60%
+55 ~~ 3355 ℃℃ 5% ~ 95% 1 año 40% ≤SOC≤60%
+4400 ~~ 5500 ℃℃ 5% ~ 95% 7 días 40% ≤SOC≤60%
+555000 ℃℃℃ EEEnnnccciiimmmaaa / Prohibir /
+63
+--- Página 65 ---
+SISTEMA DE ALIMENTACIÓN DE BATERÍA
+Mantenimiento
+Plan de mantenimiento preventivo
+10.000 kilometros 30.000 kilometros 60.000 kilometros 120.000 kilometros
+Artículos
+2 meses 6 meses 12 meses 24 meses
+Inspeccionar si las bombas de refrigeración están funcionando correctamente. yo yo yo yo
+Inspeccionar el depósito de refrigerante, nivel de refrigerante y conexiones de tuberías yo yo yo yo
+Inspeccionar la manguera de sistema de refrigeración yo yo
+Cambie la batería de enfriamiento del refrigerante del sistema R
+Nota:
+I = Inspeccionar, C = limpio, R = Reemplazar.
+AAAdddvvveeerrrttteeennnccciiiaaa ::: NNNooo uuutttiiillliiiccceee aaaggguuuaaa pppaaarrraaa llliiimmmpppiiiaaarrr lllooosss cccooommmpppooonnneeennnttteeesss eeellleeeccctttrrróóónnniiicccooosss dddeee vvveeehhhííícccuuulllooosss
+No enjuague el piso con agua
+64
+--- Página 66 ---
+Gracias
+K9W
+puro eléctrico
+departamento hace
+Vehículo comercial
+servicio posventa
+Por el

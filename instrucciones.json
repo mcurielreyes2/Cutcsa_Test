@@ -1,0 +1,205 @@
+{
+  "Sistema_de_Alimentacion_de_Bateria": {
+    "Vision_General": {
+      "Descripcion": "Descripción general del sistema de batería de energía para el autobús eléctrico K9W de BYD.",
+      "Ubicacion_de_Paquetes_de_Bateria": {
+        "Pagina_4": "Los paquetes de baterías de potencia se encuentran en la parte superior y trasera del autobús. Pack 1 está a la derecha y Pack 2 a la izquierda.",
+        "Pagina_5": "Los dos paquetes de baterías de potencia están conectados en paralelo. Cada paquete tiene 8 módulos conectados en serie.",
+        "Pagina_6": "Distribución de módulos en el autobús: 6 en el compartimiento trasero, 6 en la parte trasera de la cubierta y 4 en el frente de la cubierta."
+      },
+      "Ubicacion_de_Componentes": {
+        "Pagina_8": "El sistema de gestión de la batería incluye un controlador principal y dos controladores auxiliares, ubicados en la cabina trasera izquierda.",
+        "Pagina_9": "Hay 6 BCC en la PMB. La longitud del arnés de baja tensión entre el módulo y la BCC no debe exceder 1.5m para asegurar una buena señal y precisión en la información de la batería."
+      }
+    },
+    "Componentes": {
+      "Sistema_de_Refrigeracion": {
+        "Pagina_10": {
+          "Descripcion": "El sistema de refrigeración de la batería se utiliza para enfriar la batería para evitar un daño irreversible causado por la alta temperatura y se calienta la batería cuando está demasiado frío, manteniendo la temperatura adecuada para extender la vida útil de la batería.",
+          "Componentes": [
+            { "No": 1, "Nombre": "Controlador de administración térmica", "Cantidad": 1 },
+            { "No": 2, "Nombre": "Bomba eléctrica de montaje", "Cantidad": 4 },
+            { "No": 3, "Nombre": "Tanque de refrigerante", "Descripcion": "Contiene sensor de nivel de refrigerante" },
+            { "No": 4, "Nombre": "Sensor de temperatura", "Cantidad": 2 },
+            { "No": 5, "Nombre": "Tuberías y tubos flexibles" }
+          ]
+        },
+        "Logica_de_Control": {
+          "Pagina_20": "Cuando la temperatura de la batería es más de 35 °C durante la carga, BMC enviará la orden para iniciar el refrigerante, bombas y A/C para enfriar la batería, y se detendrá cuando la temperatura del refrigerante esté por debajo de 33 °C. Durante la descarga, el sistema funciona a 33 °C y se detiene a 30 °C."
+        }
+      },
+      "Enchufe_de_Servicio": {
+        "Pagina_14": "El enchufe de servicio desconecta el alto voltaje para mantenimiento e integra dos contactores de división de voltaje y sensores de corriente de espera."
+      }
+    },
+    "Procedimientos_de_Mantenimiento": {
+      "Refrigerante": {
+        "Pagina_47": "Instrucciones para rellenado de refrigerante: encender la bomba durante 5 minutos y repetir hasta que el nivel esté entre las marcas 'H' y 'L'. Cada sistema tiene una capacidad de refrigerante de 30 litros en total.",
+        "Advertencias": [
+          "No abrir la tapa del depósito mientras esté caliente.",
+          "No mezclar con diferentes modelos de refrigerante.",
+          "Punto de congelación recomendado: -40 °C."
+        ]
+      },
+      "Desmontaje_y_Montaje": {
+        "Desmontaje_de_BMC": {
+          "Pagina_42": [
+            "1. Apague el autobús y apague el interruptor de LV.",
+            "2. Use zapatos aislantes, guantes y cinturón de seguridad, y prepárese para trabajar en el techo del autobús.",
+            "3. Desconecte el conector de servicio de manera segura y espere 10 minutos antes de operar en alta tensión.",
+            "4. Retire los pernos y conectores LV para despegar el BMC (10N M6 · M)."
+          ]
+        },
+        "Desmontaje_de_Bateria": {
+          "Pagina_43": [
+            "1. Apague el autobús y apague el interruptor de LV.",
+            "2. Use zapatos aislantes, guantes y cinturón de seguridad para trabajar en el techo del autobús.",
+            "3. Desconecte el conector de servicio de manera segura y espere 10 minutos antes de operar en alta tensión.",
+            "4. Retire los 6 tornillos."
+          ],
+          "Pagina_44": [
+            "5. Fije la manguera de refrigerante con una abrazadera de sello y quite el tubo de enfriamiento usando un recipiente para recolectar el refrigerante.",
+            "6. Bloquee el puerto de refrigerante en la batería con una funda de goma para detener el flujo.",
+            "7. Abra la cubierta de los terminales positivo y negativo.",
+            "8. Retire los tornillos de los cables positivo y negativo, y saque el cable.",
+            "9. Tire de la hebilla ligeramente para liberar el conector."
+          ]
+        },
+        "Desmontaje_de_Bomba_de_Refrigerante": {
+          "Pagina_48": [
+            "Herramientas necesarias: alicates de prensión (2 conjuntos), abrazadera de un tubo (1 set), manga M6 (1 set), clave de servicio (1 set).",
+            "1. Apague el autobús y el interruptor de la batería LV, y espere 10 minutos.",
+            "2. Abra la cubierta del techo de la cabina con la llave de cabeza cuadrada y localice la bomba eléctrica.",
+            "3. Retire los dos tornillos del soporte."
+          ],
+          "Pagina_49": [
+            "4. Desconecte el conector de bajo voltaje y envuélvalo con cinta adhesiva.",
+            "5. Use dos pinzas para frenar las tuberías y evitar que el refrigerante fluya.",
+            "6. Use una abrazadera de tubo para quitar la abrazadera y desconectar las mangueras, recolectando el refrigerante restante."
+          ]
+        },
+        "Desmontaje_de_Sensor_de_Temperatura": {
+          "Pagina_50": [
+            "Herramientas necesarias: alicates de prensión (2 conjuntos), abrazadera de un tubo (1 set).",
+            "1. Apague el autobús y el interruptor de la batería LV, y espere 10 minutos.",
+            "2. Abra la cubierta del techo y localice el sensor de temperatura.",
+            "3. Desconecte el conector y asegúrelo con cinta adhesiva.",
+            "4. Use pinzas para sujetar las mangueras que conectan el sensor.",
+            "5. Use una abrazadera de tubo para quitar la abrazadera y desconectar las mangueras.",
+            "6. Retire el sensor de temperatura."
+          ]
+        }
+      },
+      "Plan_de_Mantenimiento": {
+        "Pagina_65": [
+          {
+            "Articulo": "Sistema de refrigeración",
+            "Frecuencia": "Cada 10,000 km o 2 meses",
+            "Accion": "Inspeccionar si las bombas de refrigeración están funcionando correctamente e inspeccionar el depósito de refrigerante, nivel de refrigerante y conexiones de tuberías."
+          },
+          {
+            "Articulo": "Sistema de refrigeración",
+            "Frecuencia": "Cada 30,000 km o 6 meses",
+            "Accion": "Inspeccionar si las bombas de refrigeración están funcionando correctamente e inspeccionar el depósito de refrigerante, nivel de refrigerante y conexiones de tuberías."
+          },
+          {
+            "Articulo": "Sistema de refrigeración",
+            "Frecuencia": "Cada 60,000 km o 12 meses",
+            "Accion": "Inspeccionar si las bombas de refrigeración están funcionando correctamente, inspeccionar el depósito de refrigerante, nivel de refrigerante y conexiones de tuberías, e inspeccionar la manguera del sistema de refrigeración."
+          },
+          {
+            "Articulo": "Sistema de refrigeración",
+            "Frecuencia": "Cada 120,000 km o 24 meses",
+            "Accion": "Inspeccionar si las bombas de refrigeración están funcionando correctamente, inspeccionar el depósito de refrigerante, nivel de refrigerante y conexiones de tuberías, inspeccionar la manguera del sistema de refrigeración, y reemplazar la batería de enfriamiento del refrigerante."
+          }
+        ]
+      }
+    },
+    "Diagnostico_de_Fallos": {
+      "Pagina_54": [
+        {
+          "Malfuncionamiento": "BIC defectuoso",
+          "Causa": "Problema de muestreo de voltaje o temperatura en el BIC",
+          "Solucion": "Reemplazar o intercambiar el BIC con uno normal"
+        },
+        {
+          "Malfuncionamiento": "FPC defectuoso",
+          "Causa": "Problema de muestreo de temperatura o soldadura suelta",
+          "Solucion": "Reemplazar el FPC o volver a soldarlo"
+        }
+      ],
+      "Pagina_55": [
+        {
+          "Malfuncionamiento": "Problema en línea CAN",
+          "Causa": "Resistencia fuera de rango",
+          "Solucion": "Reparar la línea CAN y verificar alimentación de 24V"
+        },
+        {
+          "Malfuncionamiento": "Fallo en BCC",
+          "Causa": "BMC no recibe información de la célula",
+          "Solucion": "Abrir el paquete y reemplazar el módulo BCC"
+        }
+      ],
+      "Relacion_Tension_SOC": {
+        "Pagina_56": "Relación de tensión-SOC de las celdas para diagnóstico. Valores de voltaje desde 2.284V a 3.45V."
+      },
+      "Pagina_59": {
+        "Malfuncionamiento": "Fuga eléctrica",
+        "Herramienta": "Multímetro",
+        "Metodo_de_Inspeccion": "Conectar el polo positivo del multímetro con el polo positivo de la batería y el polo negativo con la masa del autobús. El valor normal debe ser inferior a 10V. Si el voltaje es demasiado alto, contactar a un ingeniero de BYD."
+      },
+      "Pagina_60": {
+        "Malfuncionamiento": "SOC aumenta de repente",
+        "Causa": "Desequilibrio severo en las celdas de la batería",
+        "Ejemplos": "Durante la carga, si ambos paquetes tienen un SOC del 70%, la SOC del bus será 70%. Si una celda en el paquete 1 sube a 3.8V, la SOC de ese paquete subirá a 100%, causando que la SOC del bus aumente a 85%."
+      },
+      "Pagina_61": {
+        "Malfuncionamiento": "Mal balance de la batería",
+        "Definicion": "La tensión de algunas celdas es inferior al nivel medio al cargar y/o superior al descargar. Requiere rebalanceo.",
+        "Metodo": [
+          "1. Identificar la celda defectuosa.",
+          "2. Cargar y descargar completamente una celda buena para comparar capacidad.",
+          "3. Descargar la celda defectuosa y recargar con la capacidad adecuada.",
+          "4. Repetir hasta que el paquete esté balanceado."
+        ]
+      },
+      "Pagina_62": {
+        "Malfuncionamiento": "Atenuación de la celda",
+        "Causa": "Si una celda siempre está por encima del nivel medio al cargar y baja al descargar, indica atenuación.",
+        "Solucion": "Reemplazar la celda afectada."
+      }
+    },
+    "Mantenimiento_de_Bateria": {
+      "Pagina_64": {
+        "Almacenamiento": [
+          {
+            "Temperatura": "Debajo de -40°C",
+            "Condicion": "Prohibido almacenar"
+          },
+          {
+            "Temperatura": "-40 a 5°C",
+            "Humedad": "5%-95%",
+            "Tiempo": "Hasta 6 meses",
+            "SOC": "40%-60%"
+          },
+          {
+            "Temperatura": "5 a 35°C",
+            "Humedad": "5%-95%",
+            "Tiempo": "Hasta 1 año",
+            "SOC": "40%-60%"
+          },
+          {
+            "Temperatura": "40 a 50°C",
+            "Humedad": "5%-95%",
+            "Tiempo": "Hasta 7 días",
+            "SOC": "40%-60%"
+          },
+          {
+            "Temperatura": "Encima de 50°C",
+            "Condicion": "Prohibido almacenar"
+          }
+        ]
+      }
+    }
+  }
+}
