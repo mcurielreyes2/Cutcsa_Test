@@ -15,6 +15,16 @@
         </div>
     </div>
     <script>
+        // Display welcome message when the page loads
+        window.onload = function() {
+            const chatBox = document.getElementById("chat-box");
+            const welcomeMessage = document.createElement("div");
+            welcomeMessage.className = "assistant-message";
+            welcomeMessage.innerText = "Hola, soy un asistente especializado en el ómnibus eléctrico BYD K9W. Estoy aquí para ayudarte con cualquier consulta relacionada con este modelo. ¿En qué puedo ayudarte hoy?";
+            chatBox.appendChild(welcomeMessage);
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to latest message
+        };
+
         async function sendMessage() {
             const inputField = document.getElementById("user-input");
             const message = inputField.value.trim();
@@ -27,11 +37,11 @@
             userMessage.className = "user-message";
             userMessage.innerText = message;
             chatBox.appendChild(userMessage);
-            chatBox.scrollTop = chatBox.scrollHeight;
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to latest message
 
             // Display typing indicator
             const typingIndicator = document.createElement("div");
-            typingIndicator.className = "assistant-message waiting-message";
+            typingIndicator.className = "assistant-message";
             typingIndicator.innerHTML = '<span class="typing-indicator"></span><span class="typing-indicator"></span><span class="typing-indicator"></span>';
             chatBox.appendChild(typingIndicator);
             chatBox.scrollTop = chatBox.scrollHeight;
@@ -53,7 +63,7 @@
             assistantMessage.className = "assistant-message";
             chatBox.appendChild(assistantMessage);
             typeWriterEffect(assistantMessage, data.message);
-            chatBox.scrollTop = chatBox.scrollHeight;
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to latest message
         }
 
         // Typing effect for assistant's response
@@ -63,7 +73,7 @@
                 if (index < text.length) {
                     element.innerHTML += text.charAt(index);
                     index++;
-                    setTimeout(type, 15); // Adjust typing speed here
+                    setTimeout(type, 10); // Adjust typing speed here
                 }
             }
             type();
@@ -78,3 +88,4 @@
     </script>
 </body>
 </html>
+
