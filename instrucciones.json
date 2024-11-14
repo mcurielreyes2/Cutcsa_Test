@@ -149,7 +149,7 @@
         "Metodo_de_Inspeccion": "Conectar el polo positivo del multímetro con el polo positivo de la batería y el polo negativo con la masa del autobús. El valor normal debe ser inferior a 10V. Si el voltaje es demasiado alto, contactar a un ingeniero de BYD."
       },
       "Pagina_60": {
-        "Malfuncionamiento": "SOC aumenta de repente",
+        "Malfuncionamiento": "SOC cambia de repente, aumenta o disminuye",
         "Causa": "Desequilibrio severo en las celdas de la batería",
         "Ejemplos": "Durante la carga, si ambos paquetes tienen un SOC del 70%, la SOC del bus será 70%. Si una celda en el paquete 1 sube a 3.8V, la SOC de ese paquete subirá a 100%, causando que la SOC del bus aumente a 85%."
       },
